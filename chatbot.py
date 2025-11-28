@@ -7,11 +7,11 @@ load_dotenv()
 
 # Configure the Streamlit page settings
 st.set_page_config(
-    page_title="ChatGen AI Chatbot",
-    page_icon="💭",
+    page_title="TrinAI Nexus",
+    page_icon="🤖",
     layout="centered",
 )
-st.title("💬 ChatGen AI Chatbot")
+st.title("🤖 TrinAI Nexus")
 
 # Initialize chat history in session state if it doesn't exist
 if "chat_history" not in st.session_state:
@@ -29,7 +29,7 @@ for message in st.session_state.chat_history:
 llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0.0)
 
 # Capture user input
-user_prompt = st.chat_input("Hey! Ask your question here")
+user_prompt = st.chat_input("What's on your mind? The Nexus is ready.")
 
 if user_prompt:
     # Display user message immediately
